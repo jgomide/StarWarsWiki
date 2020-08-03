@@ -1,10 +1,3 @@
-//clean malicious code inserted
-var sanitizeHTML = function (str) {
-	var temp = document.createElement('div');
-	temp.textContent = str;
-	return temp.innerHTML;
-};
-
 async function getStarWarsByName(name){
 	
 	try {
@@ -22,14 +15,12 @@ async function getStarWarsByName(name){
 		return content.results;
 		
 	} catch(e) {
-		console.log(e);
+		console.log("Error trying getStarWarsByName:", e);
 	}
 	
 };
 
 async function createContent(stringStarWars) {
-
-	console.log("createContent1 typeof " + typeof(stringStarWars));
 	
 	let html = await stringStarWars.map(Character => {
 		return `
@@ -75,11 +66,11 @@ document.addEventListener('submit', function(event) {
 		createContent(result).then(html => {
 			displayHtml(html);
 		}).catch(e => {
-			console.log("Error createContent", e);
+			console.log("Error createContent:", e);
 		});
 		
 	}).catch(e => {
-		console.log("Error getByName", e);
+		console.log("Error getStarWarsByName:", e);
 	});
 
 	// //clear the field and return to focus
