@@ -10,8 +10,6 @@ A simple Web Application to consume a public web API using Javascript
 ```bash
 
 ```
-## Road Map 
-
 ## Installation
 
 Download the content and run in the browser the index.html. 
