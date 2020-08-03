@@ -1,6 +1,6 @@
 # StarWars Wiki - Javascript 
 
-A simple Web Application to consume a public API using Javascript
+A simple Web Application to consume a public web API using Javascript
 
 ## Technologies used
 
